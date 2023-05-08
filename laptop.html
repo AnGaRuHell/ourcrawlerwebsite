@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/laptop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id = "sticky" class = "sticky" style="background: black;">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col">
+                    <div class = "main-menu">
+                        <div class = "menu-left">
+                            <div class = "navbar" style="color: #febd69;">
+                                <i class="fa fa-bars sidebar-bar"></i>
+                            </div>
+                            <div class = "team-logo" style="color: white;">
+                                WEB-CRAWLER
+                            </div>
+                        </div>
+                        <div class = "menu-right">
+                            <div class="search-space">
+                                <form class="search-form" style="display: flex;"> 
+                                    <div class="search-form-fill" style="width: 1000px;">
+                                        <div class="nav-search-field ">
+                                          <label for="twotabsearchtextbox" style="display: none;">Search Product</label>
+                                          <input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="Search Product" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search Amazon" spellcheck="false">
+                                        </div>
+                                        <div id="nav-iss-attach"></div>
+                                    </div>
+                                    <div class="nav-right">
+                                        <div class="nav-search-submit nav-sprite">
+                                          <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite nav-progressive-attribute" aria-label="Go">
+                                            <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="0">
+                                          </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="Content">
+        <div class="SUB-PRODUCT">
+            <ul class="PRODUCT-FILTER" id = "product-filter">
+                <li class = "RAM" id ="ram-filter">
+                    <p>RAM</p>
+                    <div class = "FILTER" style="display: none;">
+                        <div class="filter-list  props">
+                            <a onclick="ramFilter(this)">4 GB</a>
+                            <a onclick="ramFilter(this)">8 GB</a>
+                            <a onclick="ramFilter(this)">16 GB</a>
+                            <a onclick="ramFilter(this)">32 GB</a>
+                            <a onclick="ramFilter(this)">64 GB</a>
+                        </div>
+                    </div>
+                </li>
+                <li class = "CPU" id = "cpu-filter">
+                    <p>CPU</p>
+                    <div class = "FILTER" style="display: none;">
+                        <div class="filter-list  props">
+                            <a>Apple M1</a>
+                            <a>Apple M2</a>
+                            <a>Apple M1</a>
+                            <a>Apple M1</a>
+                            <a>Apple M1</a>
+                        </div>
+                    </div>
+                </li>
+                <li class = "DISK" id = "disk-filter">
+                    <p>DISK</p>
+                    <div class = "FILTER" style="display: none;">
+                        <div class="filter-list  props">
+                            <a>SSD 2 TB</a>
+                            <a>SSD 1 TB</a>
+                            <a>SSD 512 GB</a>
+                            <a>SSD 256 GB</a>
+                            <a>SSD 128 GB</a>
+                        </div>
+                    </div>
+                </li>
+                <li class = "SCREEN" id = "cpu-filter">
+                    <p>SCREEN</p>
+                    <div class = "FILTER" style="display: none;">
+                        <div class="filter-list  props">
+                            <a>11.6 inch</a>
+                            <a>13 inch</a>
+                            <a>13.3 inch</a>
+                            <a>13.6 inch</a>
+                            <a>14 inch</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="PRODUCT-CATEGORY" id ="product-category">
+            </ul>
+            <div id = "list_product" class="list_product"></div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/laptop.js"></script>
+</html>
