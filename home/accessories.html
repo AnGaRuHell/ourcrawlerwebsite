@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/gamingaccessories.css">
+    <link rel="stylesheet" href="./css/priceInput.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Document</title>
@@ -51,6 +52,7 @@
                 </div>
             </div>
         </div>
+        
         <div id="Containerpanel" class="show">
           <div id="Khungpanel">
             <div class="Headerpanel">
@@ -82,7 +84,26 @@
           </button>
       </div>
     </header>
-
+    <div class="wrapper-price-input">
+      <h2> Price</h2>
+      <div class="price-input">
+          <div class="field">
+              <span> Min </span>
+              <input type="number" class="input-min" value = "0">
+          </div>
+          <div class="field">
+              <span> Max </span>
+              <input type="number" class="input-max" value = "100000000">
+          </div>
+      </div>
+      <div class="slider">
+          <div class="progress"></div>
+      </div>
+      <div class="range-input">
+          <input type="range" class="range-min" min = "0" max = "100000000" value = "0" step = "1000000">
+          <input type="range" class="range-max" min = "0" max = "100000000" value = "100000000" step = "1000000">
+      </div>
+  </div>
     <div class="Content">
         <div class="SUB-PRODUCT">
             <div id = "num_products" style="display: flex; justify-content: flex-end; font-size: large; font-weight:bolder; margin-bottom: 10px;">
@@ -94,4 +115,5 @@
 </body>
 
 <script src="./js/accessories.js"></script>
+<script src="./js/priceInput.js"></script>
 </html>

@@ -1,12 +1,16 @@
-brand_now = null;
-filter_now = null;
+brand_now = "ALL";
+category_now ='keyboard';
+var filter_now = null;
+var FilterEle_now = null;
+let minVal = 0;
+let maxVal = 100000000;
 var tabSearch = document.getElementById("twotabsearchtextbox");
 tabSearch.addEventListener("keydown", function(event) {
   if (event.keyCode === 13) { // kiểm tra nếu phím nhấn là Enter
     event.preventDefault(); // ngăn chặn trang web chuyển đến URL khác
     var textSearch = tabSearch.value.trim(); 
     tabSearch.value = ''; // đặt lại giá trị của phần tử input thành một xâu rỗng
-    updateList({category: 'laptop', name:textSearch});
+    updateList({category: category_now, name:textSearch});
   }
 });
 
@@ -86,8 +90,7 @@ function render_brand(){
 function cateFilter(thisEle){
     removeClassActiveItemMenu();
     brand_now = thisEle.textContent.trim();
-
-    updateList({category: 'keyboard', name: brand_now});
+    updateList({category: [category_now], name: brand_now});
 }
 
 function render_KeyboardItems(listData){
@@ -119,13 +122,14 @@ function removeClassActiveItemMenu(){
 
 function Filter(thisEle){
   //  console.log("hello");
-    var FilterEle = thisEle.textContent;
-    FilterEle.trim();
+    FilterEle_now = thisEle.textContent;
+    FilterEle_now.trim();
     filter_now.trim();
-    console.log(FilterEle, filter_now);
+    console.log(FilterEle_now, filter_now);
     removeClassActiveItemMenu();
 
-    updateList({category: 'keyboard', [filter_now]: [FilterEle]});
+    if (filter_now === null || FilterEle_now === null) updateList({category: [category_now],name:brand_now, minVal:[minVal], maxVal:[maxVal]});
+        else updateList({category: [category_now], name: brand_now, minVal: [minVal], maxVal: [maxVal], [filter_now]:[FilterEle_now]});
 }
 function updateNumProduct(numProduct) {
     var productsDiv = document.getElementById("num_products");

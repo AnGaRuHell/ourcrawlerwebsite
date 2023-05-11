@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/mouse.css">
+    <link rel="stylesheet" href="./css/priceInput.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Document</title>
@@ -93,7 +94,7 @@
                 <ul class="PRODUCT-FILTER" id = "product-filter">
                     <li class = "CONNECT_TYPE" id ="connect_type-filter">
                         <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px;">
-                            <p>CONNECT TYPE</p>
+                            <p>CONNECT_TYPE</p>
                             <span></span>
                             <div class = "FILTER" style="display: none;">
                                 <div class="filter-list  props">
@@ -121,6 +122,26 @@
                     </li>
                 </ul>
             </div>
+            <div class="wrapper-price-input">
+                <h2> Price</h2>
+                <div class="price-input">
+                    <div class="field">
+                        <span> Min </span>
+                        <input type="number" class="input-min" value = "0">
+                    </div>
+                    <div class="field">
+                        <span> Max </span>
+                        <input type="number" class="input-max" value = "100000000">
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                    <input type="range" class="range-min" min = "0" max = "100000000" value = "0" step = "1000000">
+                    <input type="range" class="range-max" min = "0" max = "100000000" value = "100000000" step = "1000000">
+                </div>
+            </div>
             <div id = "num_products" style="display: flex; justify-content: flex-end; font-size: large; font-weight:bolder; margin-bottom: 10px;">
                 
             </div>
@@ -130,4 +151,5 @@
 </body>
 
 <script src="./js/mouse.js"></script>
+<script src="./js/priceInput.js"></script>
 </html>

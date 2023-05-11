@@ -1,4 +1,5 @@
 brand_now = "ALL";
+category_now ='laptop';
 var filter_now = null;
 var FilterEle_now = null;
 let minVal = 0;
@@ -9,7 +10,7 @@ tabSearch.addEventListener("keydown", function(event) {
     event.preventDefault(); // ngăn chặn trang web chuyển đến URL khác
     var textSearch = tabSearch.value.trim(); 
     tabSearch.value = ''; // đặt lại giá trị của phần tử input thành một xâu rỗng
-    updateList({category: 'laptop', name:textSearch});
+    updateList({category: category_now, name:textSearch});
   }
 });
 
@@ -96,8 +97,7 @@ function render_brand(){
 function cateFilter(thisEle){
     removeClassActiveItemMenu();
     brand_now = thisEle.textContent.trim();
-
-    updateList({category: 'laptop',name:brand_now, [filter_now]: [FilterEle_now], minVal:[minVal], maxVal:[maxVal]});
+    updateList({category: [category_now], name: brand_now});
 }
 
 function render_LaptopItems(listData){
@@ -135,7 +135,7 @@ function Filter(thisEle){
     console.log(FilterEle_now, filter_now);
     removeClassActiveItemMenu();
 
-    updateList({category: 'laptop',name:brand_now, [filter_now]: [FilterEle_now], minVal:[minVal], maxVal:[maxVal]});
+    updateList({category: category_now,name:brand_now, [filter_now]: [FilterEle_now], minVal:[minVal], maxVal:[maxVal]});
 }
 function updateNumProduct(numProduct) {
     var productsDiv = document.getElementById("num_products");
@@ -188,7 +188,7 @@ filter_list.forEach(function (filter) {
 });
 
 render_brand();
-updateList({category: 'laptop', name:null});
+updateList({category: category_now, name:null});
 
 function openPanel(){
     document.getElementById("Containerpanel").style.display = "block";

@@ -21,9 +21,8 @@ rangeInput.forEach(input =>{
             progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
         }
         console.log(filter_now, FilterEle_now);
-        if (filter_now === null)
-        updateList({category: 'laptop',name:brand_now, [filter_now]: [FilterEle_now], minVal:[minVal], maxVal:[maxVal]});
-        else updateList({category: 'laptop', name: brand_now, minVal: [minVal], maxVal: [maxVal], [filter_now]:[FilterEle_now]});
+        if (filter_now === null || FilterEle_now === null) updateList({category: [category_now],name:brand_now, minVal:[minVal], maxVal:[maxVal]});
+        else updateList({category: [category_now], name: brand_now, minVal: [minVal], maxVal: [maxVal], [filter_now]:[FilterEle_now]});
     })
     
 })

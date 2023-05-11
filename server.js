@@ -88,4 +88,3 @@ app.get('/keyboard', function (req, res) {
 app.get('/screen', function (req, res) {
   res.sendFile(__dirname + '/home/screen.html');
 });
-

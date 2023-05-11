@@ -1,12 +1,16 @@
-brand_now = null;
-filter_now = null;
+brand_now = "ALL";
+category_now ="phone";
+var filter_now = null;
+var FilterEle_now = null;
+let minVal = 0;
+let maxVal = 100000000;
 var tabSearch = document.getElementById("twotabsearchtextbox");
 tabSearch.addEventListener("keydown", function(event) {
   if (event.keyCode === 13) { // kiểm tra nếu phím nhấn là Enter
     event.preventDefault(); // ngăn chặn trang web chuyển đến URL khác
     var textSearch = tabSearch.value.trim(); 
     tabSearch.value = ''; // đặt lại giá trị của phần tử input thành một xâu rỗng
-    updateList({category: 'phone', name:textSearch});
+    updateList({category: category_now, name:textSearch});
   }
 });
 function openPanel(){
