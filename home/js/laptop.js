@@ -99,18 +99,41 @@ function cateFilter(thisEle){
     brand_now = thisEle.textContent.trim();
     updateList({category: [category_now], name: brand_now});
 }
+function convertToThousandSeparator(number) {
+
+    let numberStr = number.toString();
+  
+    const length = numberStr.length;
+    const insertIndex = length % 3 > 0 ? length % 3 : 0;
+  
+    let result = numberStr.slice(0, insertIndex);
+    let i = insertIndex;
+    while (i < length) {
+      if (result.length > 0) {
+        result += ",";
+      }
+      result += numberStr.slice(i, i + 3);
+      i += 3;
+    }
+  
+    result += "đ";
+  
+    return result;
+}
+  
 
 function render_LaptopItems(listData){
     const listItems = document.getElementById("list_product");
     let eleRender = "";
 
     listData.forEach((i) => {
+
         eleRender += `<div class = "Laptop"> 
             <a href = "${i.url}">
                 <img src = "${i.image_urls}">
                 <div class = "infor-lap">
-                    <p>${i.name}</p>
-                    <p>${i.price}</p>
+                    <p class = "name-product">${i.name}</p>
+                    <p class = "price-product">${convertToThousandSeparator(i.price)}</p>
                 </div>
             </a>
         </div>
@@ -128,11 +151,9 @@ function removeClassActiveItemMenu(){
 }
 
 function Filter(thisEle){
-  //  console.log("hello");
     FilterEle_now = thisEle.textContent;
     FilterEle_now.trim();
     filter_now.trim();
-    console.log(FilterEle_now, filter_now);
     removeClassActiveItemMenu();
 
     updateList({category: category_now,name:brand_now, [filter_now]: [FilterEle_now], minVal:[minVal], maxVal:[maxVal]});
@@ -182,7 +203,6 @@ function render_FILTER(event) {
     
 }
 var filter_list = document.querySelectorAll(".PRODUCT-FILTER li");
-console.log(filter_list);
 filter_list.forEach(function (filter) {
     filter.addEventListener("click", render_FILTER);
 });

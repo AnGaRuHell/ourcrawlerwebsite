@@ -90,15 +90,34 @@
                 <ul class="PRODUCT-CATEGORY" id ="product-category">
                 </ul>
             </div>
-            <div style="margin-top: 20px;">
+            <div style="margin-top: 15px; display: flex; padding: 10px;">
+                <div class="wrapper-price-input">
+                    <h4>Khoảng giá</h4>
+                    <div class="price-input">
+                        <div class="field">
+                            <input type="text" class="input-min" value = "0đ" readonly>
+                        </div>
+                        <div class="field">
+                            <input type="text" class="input-max" value = "200.000.000đ" readonly>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                        <input type="range" class="range-min" min = "0" max = "200000000" value = "0" step = "1000000">
+                        <input type="range" class="range-max" min = "0" max = "200000000" value = "200000000" step = "1000000">
+                    </div>
+                </div>
                 <ul class="PRODUCT-FILTER" id = "product-filter">
+                    <h4>Thông số</h4>
                     <li class = "RAM" id ="ram-filter">
-                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px;">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
                             <p>RAM</p>
                             <span></span>
                             <div class = "FILTER" style="display: none;">
                                 <div class="filter-list  props">
-                                    <a onclick = "Filter(this)">4 GB</a>
+                                    <!-- <a onclick = "Filter(this)">4 GB</a> -->
                                     <a onclick = "Filter(this)">8 GB</a>
                                     <a onclick = "Filter(this)">16 GB</a>
                                     <a onclick = "Filter(this)">32 GB</a>
@@ -108,7 +127,7 @@
                         </div>
                     </li>
                     <li class = "CPU" id = "cpu-filter">
-                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px;">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
                             <p>CPU</p>
                             <span></span>
                             <div class = "FILTER" style="display: none;">
@@ -129,7 +148,7 @@
                         </div>
                     </li>
                     <li class = "DISK" id = "disk-filter">
-                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px;">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
                             <p>DISK</p>
                             <span></span>
                             <div class = "FILTER" style="display: none;">
@@ -144,7 +163,7 @@
                         </div>
                     </li>
                     <li class = "SCREEN" id = "cpu-filter">
-                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px;">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
                             <p>SCREEN</p>
                             <span></span>
                             <div class = "FILTER" style="display: none;">
@@ -167,7 +186,7 @@
                         </div>
                     </li>
                     <li class = "CARD" id = "card-filter">
-                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px;">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
                             <p>CARD</p>
                             <span></span>
                             <div class = "FILTER" style="display: none;">
@@ -180,26 +199,6 @@
                         </div>
                     </li>
                 </ul>
-            </div>
-            <div class="wrapper-price-input">
-                <h2> Price</h2>
-                <div class="price-input">
-                    <div class="field">
-                        <span> Min </span>
-                        <input type="number" class="input-min" value = "0">
-                    </div>
-                    <div class="field">
-                        <span> Max </span>
-                        <input type="number" class="input-max" value = "100000000">
-                    </div>
-                </div>
-                <div class="slider">
-                    <div class="progress"></div>
-                </div>
-                <div class="range-input">
-                    <input type="range" class="range-min" min = "0" max = "100000000" value = "0" step = "1000000">
-                    <input type="range" class="range-max" min = "0" max = "100000000" value = "100000000" step = "1000000">
-                </div>
             </div>
             <div id = "num_products" style="display: flex; justify-content: flex-end; font-size: large; font-weight:bolder; margin-bottom: 10px;">
                 

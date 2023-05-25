@@ -89,10 +89,29 @@
                 <ul class="PRODUCT-CATEGORY" id ="product-category">
                 </ul>
             </div>
-            <div style="margin-top: 20px;">
+            <div style="margin-top: 20px; display: flex;">
+                <div class="wrapper-price-input">
+                    <h4>Khoảng giá</h4>
+                    <div class="price-input">
+                        <div class="field">
+                            <input type="text" class="input-min" value = "0đ" readonly>
+                        </div>
+                        <div class="field">
+                            <input type="text" class="input-max" value = "100.000.000đ" readonly>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                        <input type="range" class="range-min" min = "0" max = "100000000" value = "0" step = "1000000">
+                        <input type="range" class="range-max" min = "0" max = "100000000" value = "100000000" step = "1000000">
+                    </div>
+                </div>
                 <ul class="PRODUCT-FILTER" id = "product-filter">
+                    <h4>Thông số</h4>
                     <li class = "DISK" id ="disk-filter">
-                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px;">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
                             <p>DISK</p>
                             <span></span>
                             <div class = "FILTER" style="display: none;">
@@ -108,7 +127,7 @@
                         </div>
                     </li>
                     <li class = "SCREEN" id = "screen-filter">
-                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px;">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
                             <p>SCREEN</p>
                             <span></span>
                             <div class = "FILTER" style="display: none;">
@@ -123,7 +142,7 @@
                         </div>
                     </li>
                     <li class = "BATTERY" id = "battery-filter">
-                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px;">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
                             <p>BATTERY</p>
                             <span></span>
                             <div class = "FILTER" style="display: none;">
@@ -137,26 +156,6 @@
                         </div>
                     </li>
                 </ul>
-            </div>
-            <div class="wrapper-price-input">
-                <h2> Price</h2>
-                <div class="price-input">
-                    <div class="field">
-                        <span> Min </span>
-                        <input type="number" class="input-min" value = "0">
-                    </div>
-                    <div class="field">
-                        <span> Max </span>
-                        <input type="number" class="input-max" value = "100000000">
-                    </div>
-                </div>
-                <div class="slider">
-                    <div class="progress"></div>
-                </div>
-                <div class="range-input">
-                    <input type="range" class="range-min" min = "0" max = "100000000" value = "0" step = "1000000">
-                    <input type="range" class="range-max" min = "0" max = "100000000" value = "100000000" step = "1000000">
-                </div>
             </div>
             <div id = "num_products" style="display: flex; justify-content: flex-end; font-size: large; font-weight:bolder; margin-bottom: 10px;">
                 

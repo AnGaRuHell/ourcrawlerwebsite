@@ -14,6 +14,28 @@ tabSearch.addEventListener("keydown", function(event) {
   }
 });
 
+function convertToThousandSeparator(number) {
+
+    let numberStr = number.toString();
+  
+    const length = numberStr.length;
+    const insertIndex = length % 3 > 0 ? length % 3 : 0;
+  
+    let result = numberStr.slice(0, insertIndex);
+    let i = insertIndex;
+    while (i < length) {
+      if (result.length > 0) {
+        result += ",";
+      }
+      result += numberStr.slice(i, i + 3);
+      i += 3;
+    }
+  
+    result += "đ";
+  
+    return result;
+}
+
 
 function render_AccessoryItems(listData){
     const listItems = document.getElementById("list_product");
@@ -24,8 +46,8 @@ function render_AccessoryItems(listData){
             <a href = "${i.url}">
                 <img src = "${i.image_urls}">
                 <div class = "infor-lap">
-                    <p>${i.name}</p>
-                    <p>${i.price}</p>
+                    <p class = "name-product">${i.name}</p>
+                    <p class = "price-product">${convertToThousandSeparator(i.price)}</p>
                 </div>
             </a>
         </div>

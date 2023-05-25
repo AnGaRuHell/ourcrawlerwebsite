@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 const fs = require('fs');
 
 // read the JSON file
-const data = JSON.parse(fs.readFileSync('test.json'));
+const data = JSON.parse(fs.readFileSync('product.json'));
 
 // create a connection to the database
 const connection = mysql.createConnection({
